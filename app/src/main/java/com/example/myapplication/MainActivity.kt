@@ -10,7 +10,6 @@ import com.example.myapplication.ui.main.MainFragment
 
 /* Premier fragment et première activité : pour tester la définition de fragment en dur,
 mettre un ClickListener sur le fragment et faire un intent pour passer d'une activité à une autre. */
-/* Test : ajouter le fragment de manière statique */
 class MainActivity : AppCompatActivity(), MainFragment.onMvmtClickListener  {
 
     companion object{
@@ -20,11 +19,11 @@ class MainActivity : AppCompatActivity(), MainFragment.onMvmtClickListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
+        /*if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                     .replace(R.id.container, MainFragment.newInstance())
                     .commitNow()
-        }
+        } */
     }
 
     override fun onNextActivityClick(name1: String) {

@@ -6,9 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity" >
 
-    <fragment
-        android:id="@+id/second"
-        android:name="com.example.myapplication.ui.second.SecondFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 </FrameLayout>

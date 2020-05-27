@@ -35,7 +35,7 @@
         android:layout_marginBottom="21dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="@string/hint_text_for_2nd"
         app:layout_constraintBottom_toTopOf="@+id/btnGo2ndActivity"
         app:layout_constraintTop_toTopOf="@+id/message"
         tools:layout_editor_absoluteX="95dp"
