@@ -34,11 +34,11 @@
         android:layout_marginTop="35dp"
         android:layout_marginBottom="21dp"
         android:ems="10"
-        android:hint="hint"
         android:inputType="textPersonName"
+        android:hint="@string/hint_text_for_2nd"
         app:layout_constraintBottom_toTopOf="@+id/btnGo2ndActivity"
         app:layout_constraintTop_toTopOf="@+id/message"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="95dp" />
+        tools:layout_editor_absoluteX="95dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

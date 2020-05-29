@@ -2,4 +2,5 @@
     <string name="app_name">My Application</string>
     <string name="hello_world">Hello world</string>
     <string name="go_to_2nd_act">Go to second activity</string>
+    <string name="hint_text_for_2nd">Write stuffs</string>
 </resources>

@@ -12,7 +12,7 @@ import com.example.myapplication.R
 
 class SecondFragment : Fragment() {
 
-    //Passer par new instance poru créé le fragment en lui donnant le nom à afficher
+    //Passer par new instance pour créé le fragment en lui donnant le nom à afficher
     companion object {
         fun newInstance(title: String?): SecondFragment {
             val fragmentSecond = SecondFragment()
@@ -40,9 +40,8 @@ class SecondFragment : Fragment() {
         val message = arguments!!.getString(MainActivity.MESSAGE_SECOND_ACTIVITE, "")
 
 
-        val aries = view?.findViewById<TextView>(R.id.msg2ndfragment);
+        val aries = view?.findViewById<TextView>(R.id.msg2ndfragment)
         aries?.text = message
-        // TODO: Use the ViewModel
     }
 
 
