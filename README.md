@@ -1,2 +1,2 @@
 # ApprentissageAndroid
-- Utilisation des fragments ainsi que leurs communications avec les activités
+- v0 : Utilisation des fragments ainsi que leurs communications avec les activités, Utilisation d'intent : le fragment de la première activité reçoit un texte dans l'editbox, au moment du clique du bouton, l'activité récupère le texte du fragment pour le mettre dans l'intent. La seconde activité reçoit
