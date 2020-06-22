@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="hello_world">Hello world</string>
-    <string name="go_to_2nd_act">Go to second activity</string>
+    <string name="go_to_vid_act">Go to video activity</string>
     <string name="hint_text_for_2nd">Write stuffs</string>
+    <string name="click_once_text_wrote">Stuff written</string>
 </resources>

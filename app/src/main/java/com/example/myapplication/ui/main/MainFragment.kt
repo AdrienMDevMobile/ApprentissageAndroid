@@ -1,22 +1,15 @@
 package com.example.myapplication.ui.main
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.myapplication.MainActivity.Companion.MESSAGE_SECOND_ACTIVITE
 import com.example.myapplication.R
-import com.example.myapplication.SecondActivity
 import kotlinx.android.synthetic.main.main_fragment.*
-import kotlinx.android.synthetic.main.second_fragment.*
 
 /* Vue */
 class MainFragment : Fragment() {
@@ -42,8 +35,8 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        val aries = view?.findViewById<Button>(R.id.btnGo2ndActivity)
-        aries?.setOnClickListener { onGoSecondFragmentClick(it) }
+        val aries = view?.findViewById<Button>(R.id.btnStuffWritten)
+        aries?.setOnClickListener { wroteTextClick(it) }
         observeViewModel()
     }
 
@@ -69,7 +62,7 @@ class MainFragment : Fragment() {
     }
         */
 
-    fun onGoSecondFragmentClick(v: View?) {
+    fun wroteTextClick(v: View?) {
         viewModel.communicateText(edt2ndActEditText.text.toString())
         /*requireActivity().startActivity(
             Intent(activity,SecondActivity::class.java)

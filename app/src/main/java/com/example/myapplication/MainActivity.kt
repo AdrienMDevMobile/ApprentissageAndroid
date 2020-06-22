@@ -10,7 +10,8 @@ import com.example.myapplication.ui.main.MainFragment
 
 /* Premier fragment et première activité : pour tester la définition de fragment en dur,
 mettre un ClickListener sur le fragment et faire un intent pour passer d'une activité à une autre. */
-class MainActivity : AppCompatActivity(), MainFragment.onMvmtClickListener  {
+class MainActivity : AppCompatActivity()  {
+    //MainFragment.onMvmtClickListener
 
     companion object{
         const val MESSAGE_SECOND_ACTIVITE = "Message.second.activite"
@@ -25,11 +26,12 @@ class MainActivity : AppCompatActivity(), MainFragment.onMvmtClickListener  {
                     .commitNow()
         } */
     }
-
+    /*
     override fun onNextActivityClick(name1: String) {
         var intent = Intent(this, SecondActivity::class.java)
         intent.putExtra(MESSAGE_SECOND_ACTIVITE, name1)
         startActivity(intent)
     }
+    */
 
 }

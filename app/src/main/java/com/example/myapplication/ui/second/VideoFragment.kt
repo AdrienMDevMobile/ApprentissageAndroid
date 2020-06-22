@@ -4,18 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.MainActivity
 import com.example.myapplication.R
 
-class SecondFragment : Fragment() {
+class VideoFragment : Fragment() {
 
     //Passer par new instance pour créé le fragment en lui donnant le nom à afficher
     companion object {
-        fun newInstance(title: String?): SecondFragment {
-            val fragmentSecond = SecondFragment()
+        fun newInstance(title: String?): VideoFragment {
+            val fragmentSecond = VideoFragment()
             val args = Bundle()
             args.putString(MainActivity.MESSAGE_SECOND_ACTIVITE, title)
             fragmentSecond.arguments = args
@@ -23,25 +22,19 @@ class SecondFragment : Fragment() {
         }
     }
 
-    private lateinit var viewModel: SecondViewModel
+    private lateinit var viewModel: VideoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.second_fragment, container, false)
+        return inflater.inflate(R.layout.video_fragment, container, false)
     }
 
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SecondViewModel::class.java)
-
-        val message = arguments!!.getString(MainActivity.MESSAGE_SECOND_ACTIVITE, "")
-
-
-        val aries = view?.findViewById<TextView>(R.id.msg2ndfragment)
-        aries?.text = message
+        viewModel = ViewModelProviders.of(this).get(VideoViewModel::class.java)
     }
 
 
