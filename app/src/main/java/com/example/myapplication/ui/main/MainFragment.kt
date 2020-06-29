@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.myapplication.R
+import com.example.myapplication.VideoActivity
 import kotlinx.android.synthetic.main.main_fragment.*
 
 /* Vue */
@@ -35,9 +37,16 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        val aries = view?.findViewById<Button>(R.id.btnStuffWritten)
+        //val aries = view?.findViewById<Button>(R.id.btnStuffWritten)
+        val aries = btnStuffWritten
         aries?.setOnClickListener { wroteTextClick(it) }
         observeViewModel()
+
+        btnGoVideo.setOnClickListener{
+            requireActivity().startActivity(
+                Intent(activity, VideoActivity::class.java)
+            )
+        }
     }
 
 
